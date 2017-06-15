@@ -1,0 +1,13 @@
+<h1> Online Awesome Calculator </h1>
+
+<%= form_for :calculator, url: {action: "calculate"} do |f| %>
+  <%= f.text_field :input %>
+  <%= f.submit "Calculate" %>
+<% end %>
+
+<br/>
+
+<% unless @output.nil? %>
+  <%= params[:calculator][:input] %>  =  <%= @output %>
+<% end %>
+
